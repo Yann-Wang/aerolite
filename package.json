@@ -1,11 +1,24 @@
 {
   "name": "aerolite",
   "version": "0.1.6",
+  "description": "This package is used to download file, like pdf, zip, image and so on. The important feature is that the callbacks can be used and the cors situation is supported.",
+  "keywords": [
+    "aerolite",
+    "file-download",
+    "download-file",
+    "cors",
+    "file",
+    "download",
+    "downloader"
+  ],
   "license": "MIT",
   "main": "build/index.min.js",
   "files": [
     "build/"
   ],
+  "devEngines": {
+    "node": ">=8.11.2"
+  },
   "scripts": {
     "test": "node ./script/start.js",
     "prepublishOnly": "yarn webpack-prod",
