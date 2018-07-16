@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <a href="/url/to/download.pdf" download="sfsdfds.pdf">abtn</a>
+  <a href="/url/to/download.pdf">abtn2</a>
+  <button onclick="download()">start</button>
+  <button onclick="open22()">window.open</button>
+  <button onclick="location22()">location22</button>
+  <!-- <script src="/index.js"></script> -->
+  <script src="/index.min.js"></script>
+  <script>
+    function open22() {
+      window.open('/url/to/download.pdf')
+    }
+    function location22() {
+      window.location.href = "/url/to/download.pdf"
+    }
+     function download() {
+      aerolite('/url/to/download.pdf', null, {
+        successCallback: function () {
+          alert('success');
+        },
+        failCallback: function () {
+          alert('fail');
+        },
+        fileName: 'result.pdf',
+        cors: true
+      })
+    }
+  </script>
+</body>
+</html>

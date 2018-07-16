@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <button onclick="download()">start</button>
+  <!-- <script src="/index.js"></script> -->
+  <script src="/index.min.js"></script>
+  <script>
+    function download() {
+      aerolite('http://spray.com:5657/url/to/download.pdf', null, {
+        successCallback: function () {
+          alert('success');
+        },
+        failCallback: function () {
+          alert('fail');
+        },
+        fileName: 'result.pdf',
+        cors: true
+      })
+    }
+  </script>
+</body>
+</html>

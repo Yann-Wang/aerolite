@@ -1,0 +1,27 @@
+{
+  "name": "aerolite",
+  "version": "0.1.6",
+  "license": "MIT",
+  "main": "build/index.min.js",
+  "files": [
+    "build/"
+  ],
+  "scripts": {
+    "test": "node ./script/start.js",
+    "prepublishOnly": "yarn webpack-prod",
+    "webpack-dev": "node_modules/.bin/webpack --config webpack.dev.js --watch",
+    "webpack-prod": "node_modules/.bin/webpack --config webpack.prod.js"
+  },
+  "repository": "https://github.com/Yann-Wang/aerolite",
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.8.0",
+    "eslint-plugin-standard": "^3.1.0",
+    "express": "^4.16.3",
+    "webpack": "^4.12.0",
+    "webpack-cli": "^3.0.8",
+    "webpack-merge": "^4.1.3"
+  }
+}
